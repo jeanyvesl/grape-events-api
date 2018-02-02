@@ -20,6 +20,17 @@ module API
           def logger
             Rails.logger
           end
+
+          def event_params(params)
+            {
+              event_name:  params[:event_name],
+              description: params[:description],
+              event_category:   params[:event_category],
+              event_type:   params[:event_type],
+              number_of_participants:   params[:number_of_participants],
+              website:   params[:website]
+            }
+          end
         end
 
         rescue_from ActiveRecord::RecordNotFound do |e|

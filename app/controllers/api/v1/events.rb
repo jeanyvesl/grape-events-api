@@ -19,10 +19,15 @@ module API
 
         desc "Create a new event"
         params do
-          requires :name, type: String, desc: "Name of the event to create"
+          requires :event_name, type: String, desc: "Name of the event to create"
+          optional :description, type: String, desc: "Description of the event to create"
+          optional :event_category, type: String, desc: "Category of the event to create"
+          optional :event_type, type: String, desc: "Type of the event to create"
+          optional :number_of_participants, type: Integer, desc: "Maximum number of participants accepted for the event to create"
+          optional :website, type: String, desc: "URL of the website of the event to create"
         end
         post "", :events do
-          Event.create(event_name: params[:name])
+          Event.create(event_params(params))
         end
       end
     end
