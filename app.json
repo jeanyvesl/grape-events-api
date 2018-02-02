@@ -1,0 +1,22 @@
+{
+  "name": "Good2Know Events List",
+  "description": "Example events list app using MEAN",
+  "keywords": [
+    "MEAN",
+    "Angular",
+    "Node",
+    "MongoDB",
+    "mLab"
+  ],
+  "repository": "https://github.com/jeanyvesl/g2k-events-api",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}

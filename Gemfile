@@ -10,6 +10,11 @@ end
 gem 'rails', '~> 5.1.4'
 # Use Postgres as the database for Active Record
 gem 'pg'
+gem 'grape'
+gem 'grape-active_model_serializers'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'grape-swagger'
+gem 'grape-rails-routes'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
