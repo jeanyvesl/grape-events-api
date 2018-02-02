@@ -23,3 +23,4 @@ test:
 production:
   <<: *default
   database: db/g2k-pg-production
+  url: <%= ENV['DATABASE_URL'] %>
