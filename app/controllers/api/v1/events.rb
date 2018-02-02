@@ -16,6 +16,14 @@ module API
         get ":id", root: "events" do
           Event.where(id: permitted_params[:id]).first!
         end
+
+        desc "Create a new event"
+        params do
+          requires :name, type: String, desc: "Name of the event to create"
+        end
+        post "", :events do
+          Event.create(event: params[:name])
+        end
       end
     end
   end
