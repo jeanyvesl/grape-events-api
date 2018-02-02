@@ -15,6 +15,7 @@ gem 'grape-active_model_serializers'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'grape-swagger'
 gem 'grape-rails-routes'
+gem 'grape-swagger-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
