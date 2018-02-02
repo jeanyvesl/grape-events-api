@@ -22,7 +22,7 @@ module API
           requires :name, type: String, desc: "Name of the event to create"
         end
         post "", :events do
-          Event.create(event: params[:name])
+          Event.create(event_name: params[:name])
         end
       end
     end

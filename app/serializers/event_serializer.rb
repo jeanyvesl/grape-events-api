@@ -1,7 +1,6 @@
 class EventSerializer < ActiveModel::Serializer
 
-  attributes :id, :event
-       #,
-       #:category, :type, :number_of_participants, :website, :picture,
-       #:created_at, :updated_at
+  attributes :id, :event_name,
+       :category, :type, :number_of_participants, :website,
+       :created_at, :updated_at
 end
