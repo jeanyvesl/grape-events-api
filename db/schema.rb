@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202142025) do
+ActiveRecord::Schema.define(version: 20180202152059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20180202142025) do
     t.string "website"
     t.text "description"
     t.integer "number_of_participants"
-    t.string "event_type"
-    t.string "event_category"
+    t.integer "event_type"
+    t.integer "event_category"
   end
 
 end
