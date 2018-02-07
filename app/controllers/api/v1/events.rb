@@ -6,7 +6,7 @@ module API
       resource :events do
         desc "Return all events"
         get "", root: :events do
-          Event.all
+          present Event.all, with: API::Presenters::EventsRepresenter
         end
 
         desc "Return an event"
@@ -14,7 +14,7 @@ module API
           requires :id, type: String, desc: "ID of the event"
         end
         get ":id", root: "events" do
-          Event.where(id: permitted_params[:id]).first!
+          present Event.where(id: permitted_params[:id]).first!, with: API::Presenters::EventRepresenter
         end
 
         desc "Create a new event"
@@ -27,7 +27,7 @@ module API
           optional :website, type: String, desc: "URL of the website of the event to create"
         end
         post "", :events do
-          Event.create(event_params(params))
+          present Event.create(event_params(params)), with: API::Presenters::EventRepresenter
         end
       end
     end

@@ -16,6 +16,8 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'grape-swagger'
 gem 'grape-rails-routes'
 gem 'grape-swagger-rails'
+gem 'grape-roar'
+gem 'roar'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
