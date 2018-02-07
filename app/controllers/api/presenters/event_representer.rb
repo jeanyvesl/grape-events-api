@@ -18,8 +18,9 @@ module API
       property :created_at
       property :updated_at
 
-      link :self do
-        "http://localhost:9292/splines/#{id}"
+      link :self do |opts|
+          request = Grape::Request.new(opts[:env])
+          "#{request.base_url}/api/v1/events/#{id}"
       end
 
     end

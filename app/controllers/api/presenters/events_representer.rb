@@ -10,8 +10,9 @@ module API
 
       collection :entries, extend: EventRepresenter, as: :events, embedded: true
 
-      link :self do
-        "http://localhost:9292/splines"
+      link :self do |opts|
+          request = Grape::Request.new(opts[:env])
+          "#{request.base_url}/api/v1/events"
       end
     end
   end
