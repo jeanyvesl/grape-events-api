@@ -20,7 +20,7 @@ module API
 
       link :self do |opts|
           request = Grape::Request.new(opts[:env])
-          "#{request.url}/#{id}"
+          "#{request.base_url}/api/v1/events/#{id}"
       end
 
     end
